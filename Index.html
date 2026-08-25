@@ -1,535 +1,90 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Michael | Web Developer</title>
 
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #07111f;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(7, 17, 31, 0.9);
-      border-bottom: 1px solid #1e334d;
-    }
-
-    .nav {
-      height: 70px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #38bdf8;
-    }
-
-    .links {
-      display: flex;
-      gap: 25px;
-      color: #94a3b8;
-    }
-
-    .links a:hover {
-      color: #38bdf8;
-    }
-
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: #38bdf8;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 8vw, 90px);
-      line-height: 0.95;
-    }
-
-    h1 span {
-      color: #38bdf8;
-    }
-
-    .hero-text {
-      color: #94a3b8;
-      font-size: 18px;
-      margin: 25px 0;
-      max-width: 650px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      border-radius: 10px;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .primary {
-      background: #2563eb;
-    }
-
-    .secondary {
-      border: 1px solid #334155;
-    }
-
-    .card {
-      background: #0d1b2e;
-      border: 1px solid #1e334d;
-      border-radius: 22px;
-      padding: 30px;
-    }
-
-    .avatar {
-      width: 90px;
-      height: 90px;
-      display: grid;
-      place-items: center;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #2563eb, #38bdf8);
-      font-size: 35px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .muted {
-      color: #94a3b8;
-    }
-
-    section {
-      padding: 90px 0;
-    }
-
-    .title {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #94a3b8;
-      margin-bottom: 30px;
-    }
-
-    .about {
-      max-width: 800px;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skill {
-      padding: 9px 14px;
-      border: 1px solid #1e334d;
-      border-radius: 999px;
-      color: #cbd5e1;
-      background: #0d1b2e;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .project {
-      background: #0d1b2e;
-      border: 1px solid #1e334d;
-      border-radius: 18px;
-      padding: 25px;
-    }
-
-    .number {
-      color: #38bdf8;
-      font-weight: bold;
-    }
-
-    .project h3 {
-      margin: 10px 0;
-      font-size: 22px;
-    }
-
-    .project p {
-      color: #94a3b8;
-      margin-bottom: 18px;
-    }
-
-    .tags {
-      display: flex;
-      gap: 7px;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      padding: 5px 8px;
-      border-radius: 6px;
-      background: #102b45;
-      color: #7dd3fc;
-      font-size: 13px;
-    }
-
-    .contact {
-      text-align: center;
-      background: #0d1b2e;
-      border: 1px solid #1e334d;
-      border-radius: 22px;
-      padding: 60px 20px;
-    }
-
-    footer {
-      border-top: 1px solid #1e334d;
-      padding: 30px 0;
-      color: #64748b;
-    }
-
-    @media (max-width: 750px) {
-      .links {
-        display: none;
-      }
-
-      .hero-grid,
-      .projects {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        padding: 70px 0;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div id="root"></div>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">Michael<span>.</span></a>
 
-<script type="text/babel">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-function App() {
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </nav>
+  </header>
 
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Express",
-    "PostgreSQL",
-    "Prisma",
-    "Git",
-    "GitHub",
-    "REST APIs"
-  ];
+  <main>
 
-  const projects = [
-    {
-      number: "01",
-      title: "Petra School",
-      description:
-        "A school management platform with authentication, dashboards, admissions, assessments, payments and communication workflows.",
-      tags: ["React", "Node.js", "PostgreSQL", "Prisma"]
-    },
-    {
-      number: "02",
-      title: "Notes App",
-      description:
-        "A web application for creating, organizing and managing notes with a clean user experience.",
-      tags: ["JavaScript", "Web", "UI/UX"]
-    },
-    {
-      number: "03",
-      title: "Qrypti",
-      description:
-        "A privacy-focused browser concept exploring a cleaner interface and privacy-oriented experience.",
-      tags: ["JavaScript", "Privacy", "Product Design"]
-    },
-    {
-      number: "04",
-      title: "Encryption Password Manager",
-      description:
-        "A security-focused project exploring encrypted storage and responsible handling of sensitive data.",
-      tags: ["JavaScript", "Security", "Encryption"]
-    }
-  ];
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="tag">WEB DEVELOPER</p>
 
-  return (
-    <>
-      <nav>
-        <div className="container nav">
-          <a className="logo" href="#">
-            Michael<span>.</span>
-          </a>
+        <h1>
+          Building the web
+          <span>one project at a time.</span>
+        </h1>
 
-          <div className="links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-          </div>
+        <p class="description">
+          I'm Michael, a developer focused on building modern,
+          responsive and useful web applications.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
         </div>
-      </nav>
+      </div>
+    </section>
 
-      <main>
 
-        <section className="hero">
-          <div className="container hero-grid">
+    <section id="about" class="section">
+      <p class="section-label">ABOUT ME</p>
 
-            <div>
-              <div className="eyebrow">
-                Web Developer • Builder • Learner
-              </div>
+      <h2>Turning ideas into <span>working software.</span></h2>
 
-              <h1>
-                Building useful things
-                <br />
-                <span>with code.</span>
-              </h1>
+      <p class="about-text">
+        I'm a web developer who enjoys building applications,
+        learning new technologies and solving real-world problems
+        with code.
+      </p>
+    </section>
 
-              <p className="hero-text">
-                I'm Michael, a web developer focused on building
-                practical web applications, learning deeply, and
-                turning ideas into working products.
-              </p>
 
-              <div className="buttons">
-                <a className="btn primary" href="#projects">
-                  View my work
-                </a>
+    <section id="projects" class="section">
+      <p class="section-label">PROJECTS</p>
 
-                <a
-                  className="btn secondary"
-                  href="https://github.com/Michael-aal"
-                  target="_blank"
-                >
-                  GitHub ↗
-                </a>
-              </div>
-            </div>
+      <h2>Some things I've <span>built.</span></h2>
 
-            <div className="card">
-              <div className="avatar">M</div>
+      <div class="projects">
 
-              <h2>Michael</h2>
+        <article class="project-card">
+          <div class="project-number">01</div>
 
-              <p className="muted">
-                Web Developer
-              </p>
+          <h3>ZAIA</h3>
 
-              <p className="muted" style={{marginTop: "15px"}}>
-                React • Next.js • Node.js • PostgreSQL
-              </p>
-            </div>
+          <p>
+            An AI-powered application designed to provide
+            intelligent assistance through a modern interface.
+          </p>
 
+          <div class="tech">
+            <span>Python</span>
+            <span>AI</span>
+            <span>API</span>
           </div>
-        </section>
 
-
-        <section id="about">
-          <div className="container">
-
-            <h2 className="title">
-              About me
-            </h2>
-
-            <p className="subtitle">
-              A little context behind the code.
-            </p>
-
-            <p className="about">
-              I enjoy solving problems with software and learning
-              how systems work from the frontend all the way to the
-              backend. I'm especially interested in full-stack
-              development, APIs, databases, and building products
-              that solve real problems.
-            </p>
-
-          </div>
-        </section>
-
-
-        <section id="skills">
-          <div className="container">
-
-            <h2 className="title">
-              Skills
-            </h2>
-
-            <p className="subtitle">
-              Technologies I work with and continue to develop.
-            </p>
-
-            <div className="skills">
-
-              {skills.map(skill => (
-                <span className="skill" key={skill}>
-                  {skill}
-                </span>
-              ))}
-
-            </div>
-
-          </div>
-        </section>
-
-
-        <section id="projects">
-          <div className="container">
-
-            <h2 className="title">
-              Selected projects
-            </h2>
-
-            <p className="subtitle">
-              Projects that show how I approach real problems.
-            </p>
-
-            <div className="projects">
-
-              {projects.map(project => (
-
-                <article className="project" key={project.number}>
-
-                  <div className="number">
-                    {project.number}
-                  </div>
-
-                  <h3>
-                    {project.title}
-                  </h3>
-
-                  <p>
-                    {project.description}
-                  </p>
-
-                  <div className="tags">
-
-                    {project.tags.map(tag => (
-                      <span className="tag" key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-
-                  </div>
-
-                </article>
-
-              ))}
-
-            </div>
-
-          </div>
-        </section>
-
-
-        <section id="contact">
-          <div className="container">
-
-            <div className="contact">
-
-              <h2 className="title">
-                Let's connect
-              </h2>
-
-              <p className="subtitle">
-                Want to see more of my work?
-              </p>
-
-              <a
-                className="btn primary"
-                href="https://github.com/Michael-aal"
-                target="_blank"
-              >
-                Visit GitHub ↗
-              </a>
-
-            </div>
-
-          </div>
-        </section>
-
-      </main>
-
-      <footer>
-        <div className="container">
-          © 2026 Michael. Built with React.
-        </div>
-      </footer>
-    </>
-  );
-}
-
-ReactDOM.createRoot(
-  document.getElementById("root")
-).render(<App />);
-
-</script>
-
-</body>
-</html>
+          <a href="#"

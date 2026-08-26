@@ -19,7 +19,7 @@ and useful web applications.
 
 ## Featured Projects
 
-### ZAIA
+### AI voice  assistant..
 An AI-powered application built to provide intelligent assistance.
 
 ### Petra School

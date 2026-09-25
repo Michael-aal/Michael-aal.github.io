@@ -1,37 +1,27 @@
-# Michael — Web Developer
+# Michael — Satoshi | Software Developer
 
-Welcome to my portfolio.
+Personal developer portfolio for **Michael / Satoshi**.
 
-I'm Michael, a web developer focused on building modern, responsive,
-and useful web applications.
+I build practical software across interfaces, backend services, APIs, databases and product workflows.
 
-## Tech Stack
+## Featured work
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Next.js
-- Node.js
-- Express
-- PostgreSQL
-- Git & GitHub
+- **Nuvora School Platform** — multi-tenant school operations platform with React/Vite, Express, Prisma and PostgreSQL.
+- **Jarvis** — Python app/browser control and automation engine.
+- **School AI Dashboard** — Express/SQLite dashboard with AI chat, activities and announcements.
+- **Apology Website** — focused interactive web experience.
+- **Unit Converter** — small utility application.
 
-## Featured Projects
+**Living Bells** is showcased separately and clearly marked **in progress**.
 
-### ZAIA
-An AI-powered application built to provide intelligent assistance.
+## Identity
 
-### Petra School
-A school management platform with student, parent, teacher,
-and administrative features.
+I use **Satoshi** as a developer identity inspired by the name associated with Satoshi Nakamoto. For me it represents curiosity, independent building and letting the work speak for the builder.
 
 ## Portfolio
 
-Visit my portfolio:
-
 https://michael-aal.github.io/
 
-## Contact
+## GitHub
 
-Feel free to reach out for collaborations or opportunities.
+https://github.com/Michael-aal
